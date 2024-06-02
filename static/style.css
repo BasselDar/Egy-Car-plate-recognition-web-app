@@ -1,0 +1,51 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:20px;
+    background-color: #FFE4D6;
+}
+
+/* h1,h2{
+    color: #B0578D;
+    justify-content: center;
+    margin-left: 300px;
+    margin-top: 100px;
+} */
+h1{
+    color: #B0578D;
+    justify-content: center;
+    margin-left: 8px;
+    margin-top: 200px;
+    text-align: center;
+    font-size: 50px;
+}
+form{
+    margin-top: 50px;
+    margin-left: 250px;
+    justify-content: center;
+    margin-left: 8px;
+    text-align: center;
+}
+button{
+    background-color: #2470A0;
+    color: #fff;
+    padding: 10px;
+    border: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #0058b3;
+}
+p{
+    margin-bottom: 10px;
+}
+
+.navbar{
+    background-color: #000;
+
+}
+.navbar-brand img{
+    max-height: 30px;
+}
+.navbar-toggler-icon{
+    border: 2px solid #000;
+}

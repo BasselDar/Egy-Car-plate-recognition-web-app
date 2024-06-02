@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Results</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style2.css')}}">
+    <style>
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .cropped-image{
+            max-width: 100%;
+            width: 400px;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+            border-radius: 8px;
+            position: absolute;
+            left: 720px;
+            top: 300px;
+        } 
+        .segmented-image{
+            max-width: 30%;
+            width: 400px;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+            border-radius: 8px;
+            position: absolute;
+            left: 1250px;
+            top: 300px;
+        }
+        .original-image {
+            max-width: 30%;
+            display: block;
+            margin: 10px 0;
+            border-radius: 8px;
+            width: 3800px;
+            height: 480px;
+        }
+    </style>
+</head>
+<body>
+    <h1>OCR Results</h1>
+
+    
+
+    <div class="image-container">
+        <div>
+            <h2 class="p1">Original Image:</h2>
+            <img class="original-image" src="data:image/jpeg;base64,{{ image_original }}" alt="Original Image">
+        </div>
+
+        <div>
+            <h2 class="p2">Cropped License Plate Region:</h2>
+            <img class="cropped-image" src="data:image/jpeg;base64,{{ image_cropped }}" alt="Cropped License Plate">
+        </div>
+
+        <div>
+            <h2 class="p3">segmented image:</h2>
+            <img class="segmented-image" src="data:image/jpeg;base64,{{ image }}" alt="Segmented License Plate">
+        </div>
+    </div>
+
+    <div class="ocr-result-container">
+        <h2 class="p4">License Plate OCR Result:</h2>
+        {% for result in results %}
+            <p class="char-info">Characters: 
+                {% for text_info in result %}
+                    {{ text_info[1]|replace('[^a-zA-Z0-9؀-ۿ٠-٩]', '') }}
+                {% endfor %}
+            </p>
+        {% endfor %}
+    </div>
+    
+    
+
+</body>
+</html>
