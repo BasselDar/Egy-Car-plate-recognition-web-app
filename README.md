@@ -33,8 +33,13 @@ This project is a web application built using Flask, EasyOCR, and YOLO for licen
     source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
     ```
 
+3. **Install Dependencies**:
 
-3. **Download YOLO Model**:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+4. **Download YOLO Model**:
 
     Place the `best.pt` YOLO model file in the project directory.
 
