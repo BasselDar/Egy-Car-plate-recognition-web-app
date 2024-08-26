@@ -96,3 +96,8 @@ The results, including the original image, cropped license plate image, and OCR 
 - **Multi-language Support**: Extend OCR capabilities to support more languages.
 - **Real-time Detection**: Implement real-time video stream processing.
 - **Improved UI**: Enhance the user interface for better user experience.
+
+
+### Research Paper
+
+This project is based on research conducted on Egyptian car plate recognition systems. You can read the full paper [here](https://jesit.springeropen.com/articles/10.1186/s43067-024-00156-y).
